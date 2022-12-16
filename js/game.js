@@ -17,7 +17,8 @@ const ENEMY_VERTICAL_SPACING = 80;
 const ENEMY_COOLDOWN = 20;
 
 function refreshPage(result) {
-  window.location.replace(`http://localhost:3000/${result}`);
+  const id = window.location.href.substring(36);
+  window.location.replace(`http://localhost:3000/gameboard/${result}/${id}`);
 }
 
 const GAME_STATE = {
